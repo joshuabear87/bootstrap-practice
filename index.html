@@ -3,16 +3,16 @@
 
 <head>
     <!-- Required meta tags always come first -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- Additional CSS must be placed after Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Nucamp: A Better Way To Camp</title>
 </head>
 
@@ -23,11 +23,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                    <img src="img\img\logo.png" class="img-fluid" />
+                    <img src="img/logo.png" class="img-fluid" alt="logo">
                 </div>
                 <div class="col">
                     <h1>Nucamp</h1>
                     <h2>a better way to camp</h2>
+                </div>
+                <div class="col-md-4 col-xl-2 mt-4">
+                    <a class="btn btn-info btn-lg text-white text-nowrap" href="#reserveForm" role="button">Reserve Campsite</a>
                 </div>
             </div>
         </div>
@@ -36,7 +39,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img\img\logo.png" height="30" width="30" /></a>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" alt=logo></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nucampNavbar">
                     <span class="navbar-toggler-icon"></span>
             </button>
@@ -62,7 +65,7 @@
             </div>
             <div class="col">
                 <div class="d-flex">
-                    <img class="me-3 img-thumbnail" src="img\img\breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
+                    <img class="me-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail">
                     <div class="align-self-center">
                         <h3>Our Campsites</h3>
                         <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
@@ -77,8 +80,13 @@
                 <h2>Featured Campsites</h2>
             </div>
             <div class="col">
-                <h3>React Lake Campground</h3>
-                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                <div class="d-flex">
+                    <img class="me-3 img-thumbnail order-last" src="img/react-lake-thumb.jpg" alt="Breadcrumb Trail">
+                    <div class="align-self-center">
+                        <h3>React Lake Campground</h3>
+                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -89,18 +97,54 @@
             </div>
             <div class="col">
                 <div class="d-flex">
-                    <img class="me-3 img-thumbnail" src="img\img\bootstrap-thumb.png" alt="Bootstrap Outfitters" />
+                    <img class="me-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters">
                     <div class="align-self-center">
                         <h3>Bootstrap Outfitters</h3>
                         <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
                     </div>
                 </div>
             </div>
-                <h3>Bootstrap Outfitters</h3>
-                <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+        </section>
+        <section class="row row-content">
+            <div class="mx-auto col-sm-9">
+                <div class="card">
+                    <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+                        <div class="card-body">
+                            <form id="reserveForm">
+                                <div class="row mb-3">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="numberOfCampers" class="col col-form-label">Number of Campers</label>
+                                    </div>        
+                                    <div class="col-12 col-sm-6">
+                                        <select id="numberOfCampers" class="col form-control" name="number of campers">
+                                            <option value="select">Select...</option>
+                                            <option value="one">1</option>
+                                            <option value="two">2</option>
+                                            <option value="three">3</option>
+                                            <option value="four">4</option>
+                                            <option value="five">5</option>
+                                            <option value="six">6</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-12 col-sm-6">
+                                        <label class="col-form-label" for="date">Date</label>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input class="form-control" type="date" id="date" name="date">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-primary">Search</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                </div>
             </div>
         </section>
-
 	</main>
 
     <!-- footer -->
@@ -124,7 +168,7 @@
                         <a href="http://youtube.com/"><i class="fa-brands fa-youtube fa-xl"></i></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <i class="fa-solid fa-phone fa-lg text-primary"></i> 1-206-555-1234<br />
+                    <i class="fa-solid fa-phone fa-lg text-primary"></i> 1-206-555-1234<br>
                     <i class="fa-solid fa-envelope fa-lg text-primary"></i> campsites@nucamp.co
                 </div>
             </div>
