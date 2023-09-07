@@ -30,11 +30,59 @@
                     <h2>a better way to camp</h2>
                 </div>
                 <div class="col-md-4 col-xl-2 mt-4">
-                    <a class="btn btn-info btn-lg text-white text-nowrap" href="#reserveForm" role="button">Reserve Campsite</a>
+                    <button class="btn btn-info btn-lg text-white text-nowrap" href="#reserveForm" data-bs-toggle="modal" data-bs-target="#reserveModal" role="button">Reserve Campsite</button>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- modal -->
+    <div class="modal fade modal-lg" id="reserveModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Reserve a Campsite</h3>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form id="reserveForm" form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
+                            <div class="row mb-3">
+                                <div class="col-12 col-sm-6">
+                                    <label for="numberOfCampers" class="col col-form-label">Number of Campers</label>
+                                </div>        
+                                <div class="col-12 col-sm-6">
+                                    <select id="numberOfCampers" class="col form-control" name="number of campers">
+                                        <option value="select">Select...</option>
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                        <option value="four">4</option>
+                                        <option value="five">5</option>
+                                        <option value="six">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12 col-sm-6">
+                                    <label class="col-form-label" for="date">Date</label>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input class="form-control" type="date" id="date" name="date">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <button class="btn btn-dark" type="button" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
@@ -102,46 +150,6 @@
                         <h3>Bootstrap Outfitters</h3>
                         <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="row row-content">
-            <div class="mx-auto col-sm-9">
-                <div class="card">
-                    <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
-                        <div class="card-body">
-                            <form id="reserveForm">
-                                <div class="row mb-3">
-                                    <div class="col-12 col-sm-6">
-                                        <label for="numberOfCampers" class="col col-form-label">Number of Campers</label>
-                                    </div>        
-                                    <div class="col-12 col-sm-6">
-                                        <select id="numberOfCampers" class="col form-control" name="number of campers">
-                                            <option value="select">Select...</option>
-                                            <option value="one">1</option>
-                                            <option value="two">2</option>
-                                            <option value="three">3</option>
-                                            <option value="four">4</option>
-                                            <option value="five">5</option>
-                                            <option value="six">6</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-12 col-sm-6">
-                                        <label class="col-form-label" for="date">Date</label>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <input class="form-control" type="date" id="date" name="date">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col">
-                                        <button type="submit" class="btn btn-primary">Search</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
                 </div>
             </div>
         </section>
