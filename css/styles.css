@@ -39,4 +39,12 @@ footer {
     background-color: #D3D3D3;
 }
 
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel {
+    border: solid #5637DD;
+}
+
 
